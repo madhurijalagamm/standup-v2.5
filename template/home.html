@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+	<h1 style="
+        font-family: Arial, sans-serif;
+        color: #111;
+        text-align: left;
+        margin-left: 250px;">we are</h1>
+        <center><h1 style=" color: #111; 
+        font-family: 'Delicious Handrawn', cursive;
+        font-size:300px; 
+        font-weight: bold; 
+        letter-spacing: -1px; 
+        line-height: 1; 
+        text-align: center;">el comicos</h1></center>
+        
+	<p style="color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center;">Get your daily dose of laughter with our stand-up comedy shows</p><br><hr><br>
+
+    <style>
+        .banner {
+			position: relative;
+			width: 90%;
+			height: 500px;
+			background-color: #ccc;
+			overflow: hidden;
+
+		}
+		.banner img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+		}
+		.banner img.active {
+			opacity: 1;
+		}
+
+    </style>
+    <center><p style="font-family: 'Delicious Handrawn', cursive;
+        font-size: 100px;">OUR events</p></center><br>
+
+    <center><div class="banner">
+		<a href="https://example.com"><img src="../static/images/halloween.png" class="active"></a>
+		<a href="https://example.com"><img src="image-link-2.jpg"></a>
+		<a href="https://example.com"><img src="image-link-3.jpg"></a>
+	</div></center>
+    <script>
+		var slides = document.querySelectorAll('.banner img');
+		var currentSlide = 0;
+		var slideInterval = setInterval(nextSlide, 5000);
+
+		function nextSlide() 
+        {
+			slides[currentSlide].classList.remove('active');
+			currentSlide = (currentSlide + 1) % slides.length;
+			slides[currentSlide].classList.add('active');
+		}
+	
+	</script>
+    <br>
+	<p style="color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center;">
+        The perfect place to unwind and have a good laugh with friends.</p><hr><br>
+
+
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+
+        <div class="container">
+            <center><p style="font-family: 'Delicious Handrawn', cursive;
+                font-size: 100px;">THE shows</p></center><br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+          
+              
+          
+              </ol>
+            
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" style="width:100%">
+            
+              <div class="item active">
+                <div>
+                  <center>
+                  <img src="../static/images/poster1.png" alt="Chicago" style="width:49.8%;">
+                  <img src="../static/images/poster2.png" alt="New York" 
+                  style="width:49.8%;">
+                </center>
+                </div>
+                  
+              </div>
+            
+              <div class="item">
+                <div>
+                <center>
+                <img src="../static/images/poster3.png" alt="Chicago" style="width:49.8%;">
+                <img src="../static/images/poster4_square.png" alt="New York" 
+                style="width:49.8%;">
+              </center>
+              </div>
+                
+              </div>
+              
+              
+              
+              <div class="item">
+                <div>
+                  <center>
+                <img src="../static/images/poster5.png" alt="Chicago" style="width:49.8%;">
+                <img src="../static/images/poster6.png" alt="New York" 
+                  style="width:49.8%;">
+                </center>
+                </div>
+                
+                </div>
+          
+                <div class="item">
+                <div>
+                  <center>
+                <img src="../static/images/poster7.png" alt="Chicago" style="width:49.8%;">
+                <img src="../static/images/poster8.png" alt="New York" 
+                  style="width:49.8%;">
+                </center>
+                </div>
+                
+                </div>
+          
+              
+          
+          
+              </div>
+            
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+              </a>
+            </div>
+            </div>
+          
+
+
+   
+
+{% endblock %}

@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Jokes</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            h1{
+                margin-bottom: 0px;
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }  
+            .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            .navbar li {
+            float: left;
+            }
+
+            .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            /* Change the link color to #111 (black) on hover */
+            .navbar li a:hover {
+            background-color: #111;
+            }
+        </style>
+    </head>
+    <center><h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 100px;"><b>STAND UP COMEDY CLUB</b></h1></center>
+
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="http://localhost:8000/welcome/">Home</a></li>
+                <li><a href="http://localhost:8000/performers/">Performers</a></li>
+                <li><a href="http://localhost:8000/jokes/">Write Jokes</a></li>
+                <li><a href="http://localhost:8000/seejokes/">Jokes</a></li>
+                <li><a href="http://localhost:8000/login/">Login</a></li>
+                <li><a href="http://localhost:8000/signup/">Sign Up</a></li>
+            </ul>
+        </div>
+        <center><h1>Give your Best Shot!</h1></center>
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="container">
+                
+                <label for='joke'><b>Joke : </b></label>
+		        <input type='text' placeholder="Enter your best joke" name='joke' required><br>
+                <p> Note: Do not enter obscene or offensive jokes</p>
+
+            	<button type="submit"><b>Submit</b></button><br>     
+            	
+            </div></center>
+        </form>
+    </body>
+</html>
